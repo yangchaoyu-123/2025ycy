@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo</title>
+  <!-- 换成自己的路径 -->
+  <!-- <link rel="stylesheet" href="./lib/layui-v2.6.3/css/layui.css"/> -->
+ <link href="//unpkg.com/layui@2.11.6/dist/css/layui.css" rel="stylesheet">
+</head>
+<body>
+<!-- 表单开始 -->
+<div class="layui-form">
+   <!-- 出生日期开始 -->
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">出生日期</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="birthday" placeholder="yyyy-MM-dd">
+      </div>
+    </div><!--出生日期结束-->
+	
+	<!-- 创建日期开始 -->
+    <div class="layui-inline">
+      <label class="layui-form-label">创建日期</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="createDate" placeholder="yyyy-MM-dd">
+      </div>
+    </div>  <!-- 创建日期结束 -->	
+  </div>
+
+ <div class="layui-form-item">
+	 <div class="layui-inline">
+	       <label class="layui-form-label">年月选择器</label>
+	       <div class="layui-input-inline">
+	         <input type="text" class="layui-input" id="ID-laydate-type-month" placeholder="yyyy-MM">
+	       </div>
+	 </div>
+ </div>
+</div> <!--表单结束-->
+
+<!-- 换成自己的路径 -->
+<!-- <script src="./lib/layui-v2.6.3/layui.js"></script> -->
+<script src="//unpkg.com/layui@2.11.6/dist/layui.js"></script> 
+<script>
+  layui.use(function(){
+	  // 获取laydate
+    var laydate = layui.laydate;
+    // 渲染
+    laydate.render({
+      elem: '#birthday' // 出生日期文本框的id
+    });
+    // 正文显示
+    laydate.render({
+      elem: '#createDate', // 创建日期文本框的id
+      lang: 'cn' // 日历显示语言为中文
+    });
+	// 年月
+	laydate.render({
+	    elem: '#ID-laydate-type-month',
+	    type: 'month'
+	  });
+	  
+  });
+  
+ 
+</script>
+
+</body>
+</html>

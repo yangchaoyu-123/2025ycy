@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册网址</title>
+    <style>
+        div{
+            margin: auto;
+            height: 670px;
+            width: 500px;
+            border: 1px solid grey;
+            margin-top: 100px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        input{
+            width: 450px;
+            height: 30px;
+            margin-left: 20px;
+
+        }
+        #b{
+            background-color: rgb(135, 150, 235);
+            height: 50px;
+        }
+        #b:hover{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script>
+        function checked(){
+            flag=true;
+            uname=document.getElementById("username").value;
+            name=/^[\u4e00-\u9fa5]$/
+            uphone=document.getElementById("phone").value;
+            pone=/^[0-9]{11}$/
+            if(!pone.test(uphone)){
+                flag=false;
+                document.getElementById("phonetip").innerText="请输入正确的手机号"
+            }
+            aa=document.getElementById("a").value;
+            aaa=/^[0-9]{10}[@a-z.]{5,10}$/
+            if(!aaa.test(aa)){
+                flag=false;
+                document.getElementById("atip").innerText="请输入正确的邮箱"
+            }
+            uswp=document.getElementById("userpsw").value;
+            swp=/^[a-zA-Z0-9]{6,}$/
+            if(!swp.test(uswp)){
+                flag=false;
+                document.getElementById("uswptip").innerText="请填入合适的密码"
+            }
+            uswp1=document.getElementById("userpsw1").value;
+            if(uswp1 != uswp){
+                flag=false;
+                document.getElementById("unametip1").innerText="密码错误"
+            }
+            return flag
+        }
+    </script>
+</head>
+<body>
+    <div class="form-control" >
+        <h1 align="center">宠物商店注册系统</h1>
+        
+            <form action="自制.html"onsubmit="return checked()" >
+                * 姓名<br><input type="text" id="username" placeholder="请输入您的姓名"><span id="unametip" style="color: red;"></span><br><br>
+                * 手机号<br><input type="text" id="phone" placeholder="请输入11位手机号"><span id="phonetip" style="color: red;"></span><br><br>
+                * 邮箱<br><input type="text" id="a" placeholder="输入您的邮箱"><span id="atip" style="color: red;"></span><br><br>
+                * 密码<br><input type="password" id="userpsw" placeholder="输入至少6位数密码，包含数字字母"><span id="uswptip" style="color: red;"></span><br><br>
+                *确认密码<br><input type="password"id="userpsw1"placeholder="请再次输入密码"><span id="unametip1" style="color: red;"></span><br><br>
+                <input type="submit"value="注册"id="b">
+            </form>
+    
+    </div>
+</body>
+</html>

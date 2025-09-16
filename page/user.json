@@ -1,0 +1,119 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "晋中市",
+      "classname": "太谷区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },
+    {
+      "id": 10001,
+      "realname": "王五",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大三",
+      "telephone": "13834523412",
+      // "qq": "34234576",
+      // "job": "班长",
+      "status":"启用"
+    },{
+      "id": 10002,
+      "realname": "李四",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10003,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "18045678767",
+      // "qq": "23789878",
+      // "job": "团支部书记",
+      "status":"启用"
+    },{
+      "id": 10004,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "禁用"
+    },{
+      "id": 10005,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10006,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10007,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10008,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    },{
+      "id": 10009,
+      "realname": "张三",
+      "deptname": "山西省",
+      "majorname": "太原市",
+      "classname": "尖草坪区",
+      // "grade": "大二",
+      "telephone": "13545678767",
+      // "qq": "89789878",
+      // "job": "团支部书记",
+      "status": "启用"
+    }
+  ]
+}

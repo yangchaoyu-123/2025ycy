@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>添加用户</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- 修改1：把href里的路径换成自己的 -->
+		<link rel="stylesheet" href="./lib/layui-v2.6.3/css/layui.css" media="all">
+		 
+		<style>
+			/* 为带有require类的元素添加红色星号前缀 */
+			.required::before {
+				/* 星号内容 */
+				content: "*";
+					/* 红色 */
+				color: #ff0000;
+				/* 与文字保持一点距离 */
+				margin-right: 4px;
+			/* 星号加粗 */
+				font-weight: bold;				
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 网页标题，这里用fieldset来设置 -->
+		<fieldset class="layui-elem-field layui-field-title">
+			<!-- 修改2：把“添加用户”换成自己的 -->
+			<legend style="font-weight: bold;">添加用户</legend>
+		</fieldset>
+
+		<!-- 表单开始，表单要加上样式class="layui-form" -->
+		<div class="layui-form">
+			<!-- 用户名表单项开始，表单项要加上样式class="layui-form-item" -->
+			<div class="layui-form-item">
+				<!--这里的required是网页头部定义的样式，在用户名前显示红色星号，提示用户用户名必填 -->
+				<label class="layui-form-label required">用户名</label>
+				<!-- 文本框要按下面方式写，放在div里，样式和下面的一样-->
+				<div class="layui-input-block">
+					<!-- id是必须的，值由自己定；class="layui-input"指定文本框样式； lay-verify="required"用于表单验证，和后面的JS代码配合；
+			 lay-reqtext="用户名不能为空!"：配合lay-verify="required"使用，设置自己定的提示文字，否则会显示默认的：“请输入必填项”
+			 -->
+					<input id="username" type="text" name="username" class="layui-input" lay-verify="required"
+						lay-reqtext="用户名不能为空!" placeholder="请输入用户名">
+				</div>
+			</div>
+			<!--用户名表单项结束-->
+
+			<!-- 密码开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">密码</label>
+				<div class="layui-input-block">
+					<input id="password" type="password" name="password" class="layui-input" lay-verify="required"
+						lay-reqtext="密码不能为空" placeholder="请输入密码">
+				</div>
+			</div> <!-- 密码结束 -->
+
+			<!-- 真实姓名开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">真实姓名</label>
+				<div class="layui-input-block">
+					<input id="realname" type="text" name="realname" class="layui-input" lay-verify="required"
+						lay-reqtext="真实姓名不能为空" placeholder="请输入真实姓名">
+				</div>
+			</div><!-- 真实姓名结束 -->
+
+			<!-- 下拉选择：院系下拉选择开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">院系</label>
+				<div class="layui-input-block">
+					<select lay-verify="required">
+						<option value="1">计算机科学与技术学院</option>
+						<option value="2">电子信息工程学院</option>
+						<option value="3">机械电子工程学院</option>
+					</select>
+				</div>
+			</div><!-- 院系下拉选择结束-->
+
+			<!-- 年级日期选择开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">年级</label>
+				<!-- 这里用的样式class="layui-input-inline"，文本框是内联的，也就是显示为短一点的 -->
+				<div class="layui-input-inline">
+					<input id="year" type="text" name="year" placeholder="请选择入学年份" autocomplete="off"
+						class="layui-input">
+				</div>
+			</div><!-- 年级日期选择结束 -->
+
+			<!-- 单选按钮：性别单选按钮开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">性别</label>
+				<div class="layui-input-block">
+					<input type="radio" name="sex" value="男" title="男" checked="">
+					<input type="radio" name="sex" value="女" title="女">
+				</div>
+			</div>
+			<!--性别单选按钮结束-->
+
+			<!-- 手机号开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">手机</label>
+				<div class="layui-input-block">
+					<input type="text" id="phone" name="phone" lay-verify="required" lay-reqtext="手机不能为空"
+						placeholder="请输入手机" value="" class="layui-input">
+				</div>
+			</div><!-- 手机号结束 -->
+
+			<!-- 邮箱开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label required">邮箱</label>
+				<div class="layui-input-block">
+					<input type="email" name="email" placeholder="请输入邮箱" value="" class="layui-input">
+				</div>
+			</div> <!-- 邮箱结束 -->
+
+			<!-- 复选框开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">爱好</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="intrest" lay-skin="primary" title="阅读" checked>
+					<input type="checkbox" name="intrest" lay-skin="primary" title="游泳">
+					<input type="checkbox" name="intrest" lay-skin="primary" title="跳舞">
+				</div>
+			</div><!-- 复选框结束 -->
+
+			<!-- 复选框开始：另一种样子 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">选择课程</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="course" lay-skin="tag" title="语文" checked>
+					<input type="checkbox" name="course" lay-skin="tag" title="数学">
+					<input type="checkbox" name="course" lay-skin="tag" title="英语">
+				</div>
+			</div><!-- 复选框结束 -->
+			
+        <!-- 开关按钮开始 -->
+        <div class="layui-form-item">
+           <label class="layui-form-label">状态</label>
+           <div class="layui-input-block">
+               <input type="checkbox" name="status" lay-skin="switch" lay-filter="switchTest" lay-text="启用|禁用">
+           </div>
+     </div> <!-- 开关按钮结束 -->
+
+			<!-- 文本域开始 -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">备注</label>
+				<div class="layui-input-block">
+					<textarea   name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+				</div>
+			</div> <!-- 文本域结束 -->
+
+			<!-- 提交按钮 -->
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+				</div>
+			</div><!-- 提交按钮结束 -->
+
+		</div>
+		<!--表单结束-->
+
+		<!-- 修改3：把路径换成自己的 -->
+		<script src="./lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+		<script>
+			// 加载Layui中的form模块、layer模块
+			layui.use(['form', 'layer'], function() {
+				var form = layui.form; // 获得form模块
+				var layer = layui.layer; // 获得layer模块
+				$ = layui.$; // 获得jQuery中的$
+
+				// 1. 验证用户名，失去焦点时触发
+				// username是上面用户名文本框的id
+				$("#username").blur(function() {
+					// 取得用户名框中的值
+					var username = $("#username").val();
+					//正则表达式
+					var reg = /^[a-zA-Z0-9_-]{5,16}$/; 
+					if (username.length == 0 || username == null || username == '') {
+						layer.msg('用户名不能为空', {icon: 5}); // 这里的icon可选值0-6，显示出的图标不同
+					} else {
+						if (!reg.test(username)) {
+							layer.msg('用户名必须是5-16个字母数字组合！', {icon: 2});
+						}
+					}
+				});
+
+				// 2. 验证密码，失去焦点时触发
+				$("#password").blur(function() {
+					var password = $("#password").val();
+					var reg = /^[a-zA-Z0-9_-]{6,16}$/; //正则表达式
+					if (password.length == 0 || password == null || password == '') {
+						layer.msg('密码不能为空', {icon: 0});
+					} else {
+						if (!reg.test(password)) {
+							layer.msg('密码格式不对，至少输入6位字符数字组合', {icon: 2});
+						}
+					}
+				});
+			});
+
+			layui.use(['form'], function() {
+				var form = layui.form;
+				  layer = layui.layer;
+				    $ = layui.$;
+
+				//监听表单提交：确认保存按钮，提交按钮的lay-filter="saveBtn"
+				form.on('submit(saveBtn)', function(data) {
+					var index = layer.alert(JSON.stringify(data.field), {
+						title: '最终的提交信息'
+					}, function() {
+						// 关闭弹出层
+						layer.close(index);
+
+						var iframeIndex = parent.layer.getFrameIndex(window.name);
+						parent.layer.close(iframeIndex);
+
+					});
+					return false;
+				});
+
+			});
+
+			// 年选择器渲染 （入学年份）
+			// 加载日期模块laydate
+			layui.use('laydate', function() {
+				var laydate = layui.laydate;
+				var initYear;
+				laydate.render({
+					elem: '#year', // 上面入学年份文本框的id
+					type: 'year', // 显示年
+					trigger: 'click',
+					/* ready和change函数是为了实现选择年份时不用点确定直接关闭  */
+					ready: function(date) { // 控件在打开时触发，回调返回一个参数：初始的日期时间对象
+						initYear = date.year;
+					},
+					change: function(value, date, endDate) { // 年月日时间被切换时都会触发。回调返回三个参数，分别代表：生成的值、日期时间对象、结束的日期时间对象
+						var selectYear = date.year;
+						var differ = selectYear - initYear;
+						if (differ != 15 && differ != -15) {
+							if ($(".layui-laydate").length) {
+								$("#year").val(value);
+								$(".layui-laydate").remove();
+							}
+						}
+						initYear = selectYear;
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
