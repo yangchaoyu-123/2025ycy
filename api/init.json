@@ -1,0 +1,124 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/home.html"
+  },
+  "logoInfo": {
+    "title": "宠物乐园",
+    "image": "images/1.ico",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "首页",
+          "href": "xone1/welcome.html",
+          "icon": "fa fa-paw",
+          "target": "_self"
+        },
+        {
+          "title": "个人信息管理",
+          "href": "",
+          "icon": "fa fa-group",
+          "target": "_self",
+          "child": [
+          {
+            "title": "个人信息",
+            "href": "xone1/information.html",
+            "icon": "fa fa-plus-square-o",
+            "target": "_self"
+          }, {
+            "title": "地址信息",
+            "href": "xone1/address.html",
+            "icon": "fa fa-map-marker",
+            "target": "_self"
+          }
+        ]
+        },
+        {
+          "title": "商品管理",
+          "href": "",
+          "icon": "fa fa-money",
+          "target": "_self",
+          "child": [
+			  {
+			    "title": "商品信息管理",
+			    "href": "xtwo2/goodsinfor.html",
+			    "icon": "fa fa-plus-circle",
+			    "target": "_self"
+			  },
+            {
+              "title": "查询与购入",
+              "href": "xtwo2/goods.html",
+              "icon": "fa fa-search",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "订单管理",
+          "href": "",
+          "icon": "fa fa-cart-arrow-down",
+          "target": "_self",
+          "child": [
+            {
+              "title": "订单创建与提交",
+              "href": "xthree3/information2.html",
+              "icon": "fa fa-pencil-square",
+              "target": "_self"
+            }, {
+              "title": "售后管理",
+              "href": "xthree3/information.html",
+              "icon": "fa fa-user",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "会员管理",
+          "href": "",
+          "icon": "fa fa-user-secret",
+          "target": "_self",
+          "child": [
+            {
+              "title": "会员等级与开通",
+              "href": "xfour4/huiyuan.html",
+              "icon": "fa fa-plus-square-o",
+              "target": "_self"
+            }, {
+              "title": "积分管理",
+              "href": "xfour4/huiyuan2.html",
+              "icon": "fa fa-btc",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "促销管理",
+          "href": "",
+          "icon": "fa fa-paw",
+          "target": "_self",
+          "child": [
+            {
+              "title": "限时减满活动",
+              "href": "xfive5/cuxiao.html",
+              "icon": "fa fa-plus-circle",
+              "target": "_self"
+            }, {
+              "title": "新品套餐组合",
+              "href": "xfive5/cuxiao2.html",
+              "icon": "fa fa-search-plus",
+              "target": "_self"
+            }
+          ]
+        }
+        
+      ]
+    }
+  ]
+}
